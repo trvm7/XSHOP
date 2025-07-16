@@ -1,17 +1,6 @@
 <?php
-// اتصال بقاعدة البيانات
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "digital_store";
+include 'config.php';  // Include your database connection file
 
-// إنشاء الاتصال
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// التحقق من الاتصال
-if ($conn->connect_error) {
-    die("فشل الاتصال: " . $conn->connect_error);
-}
 
 // إنشاء المجلدات إذا لم تكن موجودة مع صلاحيات الكتابة
 $upload_dir = __DIR__ . '/uploads/';
